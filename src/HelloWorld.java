@@ -1,19 +1,54 @@
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+//        System.out.println("Hello, World!");
 //        System.out.print("Hello,");
 //        System.out.print(" World!");
-        int myFavoriteNumber = 69;
-        System.out.println(myFavoriteNumber);
-        String myString = "Nice.";
+//        int myFavoriteNumber = 69;
+//        System.out.println(myFavoriteNumber);
+//        String myString = "Nice.";
 //        String myString = 'n'; //does not work, character != string
 //        String myString = 3.14159; //does not work, int != string
-        System.out.println(myString);
+//        System.out.println(myString);
 //        long myNumber = 3.14; // double is for decimals, long is for integers
 //        long myNumber = 123L; // prints as 123
-        long myNumber = 123; // prints as 123; int < long, can take on more precise type
+//        long myNumber = 123; // prints as 123; int < long, can take on more precise type
 //        float myNumber = 3.14; // does not print because 3.14 is a double, and float is less precise; pretty much should always opt for double for best practice
-        System.out.println(myNumber);
+//        System.out.println(myNumber);
+//        int x = 5;
+//        System.out.println(x++);
+//        System.out.println(x);
+////         Run: 5; 6 because x is incremented after variable has been called; x MUST be called on its own or else it won't run since x has a new value
+//        int x = 5;
+//        System.out.println(++x);
+//        System.out.println(x);
+////        Run: 6; 6 because x is incremented before variable called
+//        String class = "reserved word";
+//        String theNumberThree = "three";
+//        Object o = theNumberThree;
+//        int three = (int) o;
+//        System.out.println(three);
+//        Doesn't work
+//        int three = (int) "three"; // inconvertible types
+//        System.out.println(three);
+//        int x = 4;
+////        x = x + 5;
+//        x += 5;
+//        System.out.println(x);
+//        int x = 3;
+//        int y = 4;
+////        y = y * x;
+//        y *= x;
+//        System.out.println(y);
+//        int x = 10;
+//        int y = 2;
+//        x /= y;
+//        y -= x;
+//        System.out.println(y);
+// Can assign a smaller variable to a larger type, but if incremented past type:
+//        byte x = 3;
+//        byte y = 120;
+//        x *= y;
+//        System.out.println(x); //should be 360, but comes out to 104 because...?
     }
 }
 
