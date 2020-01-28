@@ -3,32 +3,47 @@ import java.util.Scanner;
 public class ConsoleExercises {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
 //        double pi = 3.14159;
-//        System.out.format("The value of pi is approximately %f", pi);
+//        System.out.format("\nThe value of pi is approximately %f. \n", pi);
+
+        int i = 0;
+        while (i != -1) { // enter -1 to break out of loop
+            System.out.print("Enter an integer: ");
+            i = scanner.nextInt();
+            System.out.println("\nThe number is " + i + ".\n");
+        }
+
 //        System.out.print("Enter a word: ");
 //        String userInput = scanner.next();
 //        System.out.print("Enter three (3) words.");
 //        String userInput = scanner.nextLine(); // enter more than one string
 //        System.out.println("You entered: --> \"" + userInput + "\" <--");
+
 //        Declarations
-//        String string1;
-//        String string2;
-//        String string3;
-////        Prompts
-//        System.out.println("Enter three words.");
+        String string1, string2, string3;
+//        Prompts
+        System.out.println("Enter three words.");
 //        System.out.println("Separate each with a return.");
-////        Read in values
-//        string1 = scanner.nextLine();
-//        string2 = scanner.nextLine();
-//        string3 = scanner.next();
+//        Read in values
+        string1 = scanner.next();
+        string2 = scanner.next();
+        string3 = scanner.next();
 //        System.out.println("You entered: ");
 //        System.out.println(string1 + ", " + string2 + " and " + string3);
+        System.out.printf("\n The words are \"%s\", \"%s\" and \"%s\".\n", string1, string2, string3);
+        scanner.nextLine(); //break between next lines
+
+
 //        String sentence;
 //        System.out.println("Enter a sentence.");
-////        sentence = scanner.next(); //only returns first word
-//        sentence = scanner.nextLine();
+//        scanner.useDelimiter("\n"); // acts as next line between scanners
+//        sentence = scanner.next(); //only returns first word UNLESS using delimiter
+////        sentence = scanner.nextLine(); // does not need delimiter
 //        System.out.println("You entered: ");
 //        System.out.println(sentence);
+
+
 //        String length;
 //        String width;
 //        String height;
@@ -46,6 +61,21 @@ public class ConsoleExercises {
 //        System.out.println(2* length + 2 * width);
 //        System.out.println("The volume is: ");
 //        System.out.println(length * width * height);
+
+//scanner.useDelimiter("\n");
+//System.out.print("\nEnter the width: ");
+//String sWidth = scanner.nextLine();
+//double width = Double.parseDouble(sWdith);
+//System.out.print("\nEnter the length: ");
+//String sLength = scanner.nextLine();
+//double length = Double.parseDouble(sLength);
+//System.out.printf("The dimensions are %f by %f. \nThe perimeter is %f and the area is %f.\n", length, width, 2*(length+width), length*width);
+//
+//scanner.useDelimiter("\n");
+//System.out.print("\nEnter the width: ");
+//double width =
+
+
 //        double length;
 //        double width;
 //        double height;
@@ -66,6 +96,7 @@ public class ConsoleExercises {
 //        System.out.println(2* length + 2 * width);
 //        System.out.println("The volume is: ");
 //        System.out.println(length * width * height);
+
     }
 }
 
