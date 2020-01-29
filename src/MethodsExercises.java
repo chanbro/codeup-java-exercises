@@ -10,7 +10,8 @@ public class MethodsExercises {
         System.out.println(modulus(24, 6));
         System.out.println(multiAddition(7, 8));
         System.out.println(multiAdditionRecursive(7, 8));
-        System.out.println(getInteger(1, 10));
+//        System.out.println(getInteger(1, 10));
+        System.out.println(factorial());
     }
 
     public static int addition(int num1, int num2) {
@@ -48,14 +49,39 @@ public class MethodsExercises {
         return base + multiAdditionRecursive(base, multiplier - 1);
     }
 
-    public static int getInteger(int min, int max) {
+//    public static int getInteger(int min, int max) {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter a number between 1 and 10: ");
+//        int userInput = scanner.nextInt();
+//        if (userInput > 10 || userInput < 1) {
+//            System.out.print("Please enter a valid number.\n");
+//            return getInteger(min, max);
+//        }
+//        System.out.print("You picked: ");
+//        return userInput;
+//    }
+
+    public static long factorial() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a number between 1 and 10: ");
-        int userInput = scanner.nextInt();
-            if (userInput > 10 || userInput < 1) {
-                return getInteger(min, max);
+        int recalculate;
+        do {
+            System.out.print("Enter an integer between 1 and 10: ");
+
+            int userInput = scanner.nextInt();
+            int total = 1;
+            for (int i = 1; i < userInput; i++) {
+                if (userInput < 10) {
+                    total *= i;
+                } else {
+                    System.out.println("Please enter a valid number");
+                    return factorial();
+                }
             }
-            return userInput;
+            System.out.print(userInput + "! total is: " + (userInput * total));
+            System.out.println("\nEnter 1 to calculate another factorial, or 0 to exit.");
+            recalculate = scanner.nextInt();
+        } while (recalculate == 1);
+        return recalculate;
     }
 
 }
