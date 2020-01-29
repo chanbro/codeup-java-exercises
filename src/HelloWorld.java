@@ -10,7 +10,7 @@ public class HelloWorld {
 //        String myString = 3.14159; //does not work, int != string
 //        System.out.println(myString);
 //        long myNumber = 3.14; // double is for decimals, long is for integers
-//        long myNumber = 123L; // prints as 123
+//        long myNumber = 123L; // prints as 123, casts as long
 //        long myNumber = 123; // prints as 123; int < long, can take on more precise type
 //        float myNumber = 3.14; // does not print because 3.14 is a double, and float is less precise; pretty much should always opt for double for best practice
 //        System.out.println(myNumber);

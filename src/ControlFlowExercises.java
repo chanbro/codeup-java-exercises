@@ -77,35 +77,36 @@ public class ControlFlowExercises {
 //            System.out.println("What number would you like to go up to?");
 //            maxInt = scan.nextInt();
 //            System.out.print("number | squared | cubed\n" +
-//                    "------ | ------- | -----\n");
+//                    "---- | ----- | ---\n");
 //            for (i = baseInt; i <= maxInt; ++i){
-//                System.out.print(i + "      | " + (i * i) + "      | " + (i * i * i) + "\n");
+//                System.out.print(i + "\t| " + (i * i) + "\t| " + (i * i * i) + "\n");
 //        }
 //            System.out.println("\nWould you like to continue? [yes/no]");
 //            userInput = scan.next();
 //            ++i;
 //        } while (userInput.equals("yes"));
 
-        int numberGrade;
-        String userInput;
-        do {
-            System.out.println("Enter a numerical grade from 0 to 100.");
-            numberGrade = scan.nextInt();
-            if (numberGrade <= 59) {
-                System.out.println("Your letter grade is: F");
-            } else if (numberGrade <= 66) {
-                System.out.println("Your letter grade is: D");
-            } else if (numberGrade <= 79) {
-                System.out.println("Your letter grade is: C");
-            } else if (numberGrade <= 87) {
-                System.out.println("Your letter grade is: B");
-            } else if (numberGrade <= 100) {
-                System.out.println("Your letter grade is: A");
-            } else {
-                System.out.println("Error, please enter a number between 0 and 100");
-            }
-            System.out.println("\nWould you like to continue? [yes/no]");
-            userInput = scan.next();
-        } while (userInput.equals("yes"));
+//        int numberGrade;
+//        String userInput;
+//        do {
+//            System.out.println("\nEnter a numerical grade from 0 to 100.");
+//            numberGrade = scan.nextInt();
+//            if (numberGrade <= 59) {
+//                System.out.println("Your letter grade is: F");
+//            } else if (numberGrade <= 66) {
+//                System.out.println("Your letter grade is: D");
+//            } else if (numberGrade <= 79) {
+//                System.out.println("Your letter grade is: C");
+//            } else if (numberGrade <= 87) {
+//                System.out.println("Your letter grade is: B");
+//            } else if (numberGrade <= 100) {
+//                System.out.println("Your letter grade is: A");
+//            } else {
+//                System.out.println("Error, please enter a number between 0 and 100");
+//            }
+//            System.out.println("\nWould you like to continue? [yes/no]");
+//            userInput = scan.next();
+//        } while (userInput.equals("yes"));
+
     }
 }
