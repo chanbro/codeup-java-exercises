@@ -18,6 +18,7 @@ public class HighLow {
 
         if (limit == 0) {
             System.out.println("GAME OVER!\n");
+            System.out.println("The number was\t" + randomNumber);
             System.out.println("Chances remaining:\t");
             return counter;
         } else if (userGuess > randomNumber) {
@@ -32,10 +33,9 @@ public class HighLow {
             return guessingGame(limit);
         } else {
             System.out.println("GOOD GUESS!\n");
-            System.out.println("Chances used to guess number:\t\n");
-            return counter;
+            System.out.println("Chances used to guess number:\t");
+            return 10-limit;
         }
-
 
     }
 }
