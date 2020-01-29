@@ -111,5 +111,4 @@ public class MethodsExercises {
         return reroll;
     }
 
-
 }
