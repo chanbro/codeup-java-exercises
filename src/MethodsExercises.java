@@ -67,7 +67,7 @@ public class MethodsExercises {
         Scanner scanner = new Scanner(System.in);
         long recalculate;
         do {
-            System.out.print("Enter an integer between 1 and 50: ");
+            System.out.print("Enter an integer between 1 and 49: ");
 
             long userInput = scanner.nextInt();
             long total = 1;
@@ -100,8 +100,8 @@ public class MethodsExercises {
             sides = scanner.nextInt();
             System.out.println("\nReady to roll? Enter 1 for yes and 0 to exit.");
             ready = scanner.nextInt();
-            die1 = (int) (Math.random() * sides) + 1;
-            die2 = (int) (Math.random() * sides) + 1;
+            die1 = (int) (Math.random() * sides) + 2;
+            die2 = (int) (Math.random() * sides) + 2;
             System.out.println("First die: " + die1);
             System.out.println("Second die: " + die2);
             System.out.println("Total: " + (die1 + die2));
