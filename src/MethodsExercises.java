@@ -4,14 +4,14 @@ public class MethodsExercises {
     //keep methods separated
     public static void main(String[] args) {
         System.out.println(addition(1, 2));
-        subtraction(2, 1);
-        System.out.println(multiplication(2, 2));
-        division(6, 3);
-        System.out.println(modulus(24, 6));
-        System.out.println(multiAddition(7, 8));
-        System.out.println(multiAdditionRecursive(7, 8));
-        System.out.println(getInteger(1, 10));
-        System.out.println(factorial());
+//        subtraction(2, 1);
+//        System.out.println(multiplication(2, 2));
+//        division(6, 3);
+//        System.out.println(modulus(24, 6));
+//        System.out.println(multiAddition(7, 8));
+//        System.out.println(multiAdditionRecursive(7, 8));
+//        System.out.println(getInteger(1, 10));
+//        System.out.println(factorial());
         System.out.println(dice());
     }
 
