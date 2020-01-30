@@ -60,21 +60,18 @@ public class AdventureGame {
                 rap = 3;
                 diss = 2;
                 flex = 1;
-                System.out.println(rap);
                 break;
             case "diss":
                 cred = 10;
                 rap = 1;
                 diss = 3;
                 flex = 2;
-                System.out.println(diss);
                 break;
             case "flex":
                 cred = 10;
                 rap = 2;
                 diss = 1;
                 flex = 3;
-                System.out.println(flex);
                 break;
             default:
                 System.out.println("You ain't never gonna make it in the game if you don't pay attention, fool!");
@@ -140,20 +137,23 @@ public class AdventureGame {
     public static void kanye() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Your opponent:\tKanye West\n");
-        System.out.println("Enter \"hint\" at any point for a tip on how to decrease Kanye's cred.\nEnter \"options\" to view battle options.");
+        System.out.println("Enter \"options\" to view battle options.");
+//        Enter "hint" at any point for a tip on how to decrease Kanye's cred.
         String userInput = scanner.nextLine();
-        if (userInput.equals("hint")) {
-            System.out.println("Strength:\tSick beats\nWeakness:\tEgo");
-            kanye();
-        } else if (userInput.equals("options")) {
+//        if (userInput.equals("hint")) {
+//            System.out.println("Strength:\tSick beats\nWeakness:\tEgo");
+//            kanye();
+//        } else
+            if (userInput.equals("options")) {
             System.out.println("Rap:\tThrow down some rhymes\nDiss:\tInsult your opponent\nFlex:\tFlaunt your assets");
             kanye();
-        } else if (kanyeCred <= 5) {
+        } else if (kanyeCred <= 3) {
             System.out.println("You know you had to do it to em... time to spitfire" + rapName);
             System.out.println("Poopy-di scoop\nScoop-diddy-whoop\nKanye is nincompoop\nGet in my face it's going down\nDon't step up to a ninja from " + homeTown.charAt(0) + "-town");
             System.out.println("\nYou won the battle homes.");
             flex += 2;
             System.out.println("Your flex increased by 2!");
+            gameStart();
         } else if (userInput.equalsIgnoreCase("rap")) {
             kanyeCred -= rap;
             System.out.println("Your damage: " + rap + "\nKanye's cred: " + kanyeCred);
@@ -169,13 +169,15 @@ public class AdventureGame {
             System.out.println("Kanye's damage: " + kanyeAttack + "\nYour cred: " + cred);
             kanye();
         } else if (userInput.equalsIgnoreCase("flex")) {
-            kanyeCred -= flex;
-            System.out.println("Your damage: " + flex + "\nKanye's cred: " + kanyeCred);
-            System.out.println("Kanye:\tIN A FRENCH ASS RESTAURANT, HURRY UP WITH MY DAMN CROISSANT");
-            cred -= kanyeAttack;
-            System.out.println("Kanye's damage: " + kanyeAttack + "\nYour cred: " + cred);
-            kanye();
-        }
+                kanyeCred -= flex;
+                System.out.println("Your damage: " + flex + "\nKanye's cred: " + kanyeCred);
+                System.out.println("Kanye:\tIN A FRENCH ASS RESTAURANT, HURRY UP WITH MY DAMN CROISSANT");
+                cred -= kanyeAttack;
+                System.out.println("Kanye's damage: " + kanyeAttack + "\nYour cred: " + cred);
+                kanye();
+            } else {
+                kanye();
+            }
     }
 
 }
