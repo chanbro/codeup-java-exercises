@@ -110,5 +110,4 @@ public class MethodsExercises {
         } while (reroll == 1);
         return reroll;
     }
-
 }
