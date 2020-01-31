@@ -20,6 +20,7 @@ public class Input {
         System.out.println(input.getInt(3,10));
         System.out.println(input.getInt());
         System.out.println(input.getDouble(77, 77.7));
+        System.out.println(input.getInt("Enter an integer please"));
 
     }
 
@@ -29,6 +30,13 @@ public class Input {
         System.out.println("Enter something");
         answer = this.scanner.next();
         return answer;
+    }
+
+    public boolean yesNo(String prompt) {
+        String answer;
+        System.out.println(prompt);
+        answer = this.scanner.next();
+        return answer.charAt(0) == 'y';
     }
 
     public boolean yesNo() {
@@ -54,6 +62,13 @@ public class Input {
         return answer;
     }
 
+    public int getInt(String prompt) {
+        int answer;
+        System.out.println(prompt);
+        answer = this.scanner.nextInt();
+        return answer;
+    }
+
     public double getDouble(double min, double max) {
         double answer;
         do {
@@ -63,5 +78,34 @@ public class Input {
         return answer;
     }
 
+
+//    public double getDouble(double min, double max) {
+//        double answer;
+//        do {
+//            System.out.println("Enter a double betweeen " + min + " and " + max +": ");
+//            answer = this.scanner.nextDouble();
+//        } while (answer < min || answer > max);
+//        return answer;
+//    }
+
+    public double getDouble(String prompt, double min, double max) {
+        double answer;
+        do {
+            System.out.println(prompt);
+            answer = this.scanner.nextDouble();
+        } while (answer < min || answer > max);
+        return answer;
+    }
+
+    public double getDouble() {
+        return getDouble("Enter a double: ");
+    }
+
+    public double getDouble(String prompt) {
+        double answer;
+        System.out.println(prompt);
+        answer = this.scanner.nextDouble();
+        return answer;
+    }
 
 }
