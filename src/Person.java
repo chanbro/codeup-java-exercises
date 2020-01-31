@@ -26,8 +26,8 @@ public class Person {
 //        System.out.println(person2.getName()); // Jane
     }
 
-    public Person(String personName) {
-        name = personName;
+    public Person(String name) {
+        this.name = name;
     }
 
     // returns the person's name
