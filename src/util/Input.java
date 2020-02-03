@@ -17,7 +17,7 @@ public class Input {
         Input input = new Input();
         System.out.println(input.getString());
         System.out.println(input.yesNo());
-        System.out.println(input.getInt(3,10));
+        System.out.println(input.getInt(3, 10));
         System.out.println(input.getInt());
         System.out.println(input.getDouble(77, 77.7));
         System.out.println(input.getInt("Enter an integer please"));
