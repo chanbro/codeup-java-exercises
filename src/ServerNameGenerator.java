@@ -10,8 +10,8 @@ public class ServerNameGenerator {
         System.out.println(server.nameGenerator(adjectives, nouns));
     }
 
-   private int randomAdj = (int) (Math.random() * 9);
-    private int randomNoun = (int) (Math.random() * 9);
+   private int randomAdj = (int) (Math.random() * 10);
+    private int randomNoun = (int) (Math.random() * 10);
 
     public String nameGenerator(String[] adj, String[] noun){
         return adj[randomAdj] + "-" + noun[randomNoun];
