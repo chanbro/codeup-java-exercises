@@ -22,7 +22,7 @@ public class MoviesApplication {
 //    }
 
     //Solution
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Movie[] movieList = new MoviesArray.findAll();
     }
