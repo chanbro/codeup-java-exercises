@@ -10,11 +10,11 @@ public class Rectangle {
     }
 
 
-    public double getArea(double length, double width) {
+    public double getArea() {
         return length * width;
     }
 
-    public double getPerimeter(double length, double width) {
+    public double getPerimeter() {
         return 2 * (length + width);
     }
 
