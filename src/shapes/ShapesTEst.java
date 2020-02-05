@@ -2,13 +2,14 @@ package shapes;
 
 public class ShapesTest {
     public static void main(String[] args) {
+        Measurable myShape;
+        myShape = new Square(6);
+        System.out.println(myShape.getArea());
+        System.out.println(myShape.getPerimeter());
 
-        Measurable myShape1 = new Square(6);
-        System.out.println(myShape1.getArea());
-        System.out.println(myShape1.getPerimeter());
-        Measurable myShape2 = new Rectangle(5, 4);
-        System.out.println(myShape2.getArea());
-        System.out.println(myShape2.getPerimeter());
+        myShape = new Rectangle(5, 4);
+        System.out.println(myShape.getArea());
+        System.out.println(myShape.getPerimeter());
 
 
         // 9. Code will not compile without all methods listed in the interface because they are abstract by default
