@@ -7,7 +7,7 @@ import java.util.*;
 public class GradesApplication {
     public static void main(String[] args) {
         Scanner scanner;
-        String userInput;
+        String userInput = "";
 
         GradesApplication app = new GradesApplication();
 
@@ -33,32 +33,44 @@ public class GradesApplication {
         student4.addGrade(84);
         student4.addGrade(81);
         student4.addGrade(93);
-//        System.out.println(student4.getGradeAverage());
 
-        HashMap<String, String> students = new HashMap<>();
-        students.put("peskystreet", student1.getName());
-        students.put("darkhorse", student2.getName());
-        students.put("crookedtree", student3.getName());
-        students.put("hidingmeasles", student4.getName());
+        HashMap<String, Student> students = new HashMap<>();
+        students.put("peskystreet", student1);
+        students.put("darkhorse", student2);
+        students.put("crookedtree", student3);
+        students.put("hidingmeasles", student4);
 //        System.out.println(students);
 
-        // Displaying all usernames
-        System.out.println("Welcome!\n");
-        System.out.println("Please enter one of the following usernames to get information about the student:\n");
-        for (String student : students.keySet()) {
-            System.out.print(student + "  ");
-        }
-        // Making a scanner to take in the user's input
-        System.out.println("\n");
-        scanner = new Scanner(System.in);
-        userInput = scanner.nextLine();
-        // Displaying data based on user's input; repeat if not found
-        System.out.println("\n");
-            System.out.print(students.get(userInput) + "  ");
-            System.out.print(userInput + "  ");
 
+            // Displaying all usernames
+            System.out.println("Welcome!\n");
+            do {
+                do {
+                    System.out.println("Please enter one of the following usernames to get information about the student:\n");
+                    for (String student : students.keySet()) {
+                        System.out.print(student + "  ");
+                    }
+                    // Making a scanner to take in the user's input
+                    System.out.println("\n");
+
+                    scanner = new Scanner(System.in);
+                    userInput = scanner.nextLine();
+                } while ();
+            System.out.println("\n");
+            System.out.print(students.get(userInput).getName() + "  ");
+            System.out.print(userInput + "  ");
             // Displaying grades for user input
-            System.out.println(userInput.getGradeAverage());
+            System.out.println(students.get(userInput).getGradeAverage());
+            System.out.println("\nWould you like to see another student?");
+            scanner = new Scanner(System.in);
+            userInput = scanner.next();
+        } while (userInput.charAt(0) == 'y');
+        // Displaying data based on user's input; repeat if not found
+//        System.out.println("\n");
+//        System.out.print(students.get(userInput).getName() + "  ");
+//        System.out.print(userInput + "  ");
+//        // Displaying grades for user input
+//        System.out.println(students.get(userInput).getGradeAverage());
 
 
         //Application
