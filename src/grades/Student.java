@@ -15,6 +15,8 @@ public class Student {
 
     private String name;
     private ArrayList<Integer> grades;
+    private String date;
+    private String value;
 
     public Student(String name) {
         this.name = name;
@@ -40,5 +42,16 @@ public class Student {
         return total / grades.size();
     }
 
+//    public String getDate(){
+//        return this.date;
+//    }
+//
+//    public String getValue(){
+//        return this.value;
+//    }
+//
+//public void recordAttendance(String date, String value){
+//        student1.attendance.put(date, value);
+//}
 
 }

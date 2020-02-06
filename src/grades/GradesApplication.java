@@ -1,9 +1,8 @@
+package grades;
+
 import grades.Student;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class GradesApplication {
     public static void main(String[] args) {
@@ -37,33 +36,53 @@ public class GradesApplication {
 //        System.out.println(student4.getGradeAverage());
 
         HashMap<String, String> students = new HashMap<>();
-        students.put(student1.getName(), "peskystreet");
-        students.put(student2.getName(), "darkhorse");
-        students.put(student3.getName(), "crookedtree");
-        students.put(student4.getName(), "hidingmeasles");
+        students.put("peskystreet", student1.getName());
+        students.put("darkhorse", student2.getName());
+        students.put("crookedtree", student3.getName());
+        students.put("hidingmeasles", student4.getName());
 //        System.out.println(students);
+
+        // Displaying all usernames
+        System.out.println("Welcome!\n");
+        System.out.println("Please enter one of the following usernames to get information about the student:\n");
+        for (String student : students.keySet()) {
+            System.out.print(student + "  ");
+        }
+        // Making a scanner to take in the user's input
+        System.out.println("\n");
+        scanner = new Scanner(System.in);
+        userInput = scanner.nextLine();
+        // Displaying data based on user's input; repeat if not found
+        System.out.println("\n");
+            System.out.print(students.get(userInput) + "  ");
+            System.out.print(userInput + "  ");
+
+            // Displaying grades for user input
+            System.out.println(userInput.getGradeAverage());
+
 
         //Application
 
-            System.out.println("Welcome!\n");
-            System.out.println("Please type one of the following usernames to get information about the student:\n");
-//            System.out.println("The collection is: " + students.values().toString());
-            for (String student : students.values()) {
-                System.out.println(student);
-            }
-        do {
-            scanner = new Scanner(System.in);
-            userInput = scanner.nextLine();
-            for (String student : students.values()) {
-                if (userInput.equalsIgnoreCase(student)) {
-//                    System.out.println("Name:\t" + student.getName());
-                    System.out.println("GitHub Username:\t" + student);
-//                    System.out.println("Current Average:\t" + students.get(student).getGradeAverage().toString());
-                } else {
-                    System.out.println("Username \"" + student + "\" not found. Please input a username from the list.");
-                }
-            }
-        } while (app.yesNo());
+//            System.out.println("Welcome!\n");
+//            System.out.println("Please type one of the following usernames to get information about the student:\n");
+////            System.out.println("The collection is: " + students.values().toString());
+//            for (String student : students.values()) {
+//                System.out.println(student);
+//            }
+//        do {
+//            scanner = new Scanner(System.in);
+//            userInput = scanner.nextLine();
+//            for (String student : students.keySet()) {
+//                if (userInput.equalsIgnoreCase(student)) {
+//                    System.out.println("Name:\t" + student);
+////                    System.out.println("GitHub Username:\t" + student.value());
+////                    System.out.println("Current Average:\t" + students.get(student).getGradeAverage().toString());
+//                }
+//                else {
+//                    System.out.println("Username \"" + student + "\" not found. Please input a username from the list.");
+//                }
+//            }
+//        } while (app.yesNo());
 
     }
 
