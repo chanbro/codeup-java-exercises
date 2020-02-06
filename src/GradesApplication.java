@@ -44,27 +44,25 @@ public class GradesApplication {
 //        System.out.println(students);
 
         //Application
-        do {
+
             System.out.println("Welcome!\n");
             System.out.println("Please type one of the following usernames to get information about the student:\n");
 //            System.out.println("The collection is: " + students.values().toString());
             for (String student : students.values()) {
                 System.out.println(student);
             }
+        do {
             scanner = new Scanner(System.in);
             userInput = scanner.nextLine();
             for (String student : students.values()) {
                 if (userInput.equalsIgnoreCase(student)) {
-                    System.out.println("Name:\t" + this.getName());
-                    System.out.println("GitHub Username:\t" + this.values());
-                    System.out.println("Current Average:\t" + this.getGradeAverage());
-                }
-                else {
-                    System.out.println("Username \"" + this.values() + "\" not found. Please input a username from the list.");
+//                    System.out.println("Name:\t" + student.getName());
+                    System.out.println("GitHub Username:\t" + student);
+//                    System.out.println("Current Average:\t" + students.get(student).getGradeAverage().toString());
+                } else {
+                    System.out.println("Username \"" + student + "\" not found. Please input a username from the list.");
                 }
             }
-//            System.out.println(app.pri);
-//            printStudentInfo();
         } while (app.yesNo());
 
     }
