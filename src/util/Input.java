@@ -3,7 +3,7 @@ package util;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Input {
+public class Input extends Exception {
 
     // do not set new scanner in class; this will be applied for each method
     private Scanner scanner;
@@ -17,11 +17,11 @@ public class Input {
     public static void main(String[] args) {
         Input input = new Input();
 //
-        System.out.println(input.getInt(3, 10));
+//        System.out.println(input.getInt(3, 10));
         System.out.println(input.getInt());
-        System.out.println(input.getDouble(77, 77.7));
-        System.out.println(input.getDouble("Enter a double"));
-        System.out.println(input.getInt("Enter an integer please"));
+//        System.out.println(input.getDouble(77, 77.7));
+//        System.out.println(input.getDouble("Enter a double"));
+//        System.out.println(input.getInt("Enter an integer please"));
 
     }
 
@@ -179,6 +179,23 @@ public class Input {
         } while (error);
         return answer;
     }
+
+//    public int getBinary() throws Exception {
+//        int answer = Infinity;
+//        do {
+//            try {
+//                System.out.println(prompt);
+//                answer = Integer.valueOf(this.scanner.next());
+//                error = false;
+//            } catch (NumberFormatException ex) {
+//                System.out.println("Number Format Exception");
+////            ex.printStackTrace();
+//            }
+//        } while (error);
+//        if (answer != 0 || answer != 1)  {
+//            throw new Exception("Please only enter 0's and 1's");
+//        }
+//    }
 
 
 }
