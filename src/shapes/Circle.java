@@ -7,14 +7,14 @@ public class Circle {
 
     public static void main(String[] args) {
         Input input = new Input();
-        do {
-            double radius = input.getDouble("What is the radius of the circle?");
-            Circle circle = new Circle(radius);
-            System.out.println("Area: " + circle.getArea());
-            System.out.println("Circumference: " + circle.getCircumference());
-            circlesCreated++;
-            System.out.println("Circles created: " + circlesCreated);
-        } while (input.yesNo("Do you want to make another?"));
+//        do {
+////            double radius = input.getDouble("What is the radius of the circle?");
+//            Circle circle = new Circle(radius);
+//            System.out.println("Area: " + circle.getArea());
+//            System.out.println("Circumference: " + circle.getCircumference());
+//            circlesCreated++;
+//            System.out.println("Circles created: " + circlesCreated);
+//        } while (input.yesNo("Do you want to make another?"));
     }
 
     //    public Circle() {

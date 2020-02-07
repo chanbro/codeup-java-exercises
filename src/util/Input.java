@@ -17,10 +17,11 @@ public class Input {
     public static void main(String[] args) {
         Input input = new Input();
 //
-//        System.out.println(input.getInt(3, 10));
+        System.out.println(input.getInt(3, 10));
         System.out.println(input.getInt());
-//        System.out.println(input.getDouble(77, 77.7));
-//        System.out.println(input.getInt("Enter an integer please"));
+        System.out.println(input.getDouble(77, 77.7));
+        System.out.println(input.getDouble("Enter a double"));
+        System.out.println(input.getInt("Enter an integer please"));
 
     }
 
@@ -55,16 +56,36 @@ public class Input {
 //        return answer;
 //    }
 
-    public String getInt() {
-        String s = "";
-        try {
-            System.out.println("Enter an integer.");
-            Integer.valueOf(s = this.scanner.next());
-        } catch (NumberFormatException ex) {
-            System.out.println("Number Format Exception");
+        public int getInt(int min, int max) {
+            int answer = 0;
+            do {
+                try {
+                    System.out.println("Enter an integer between " + min + " and " + max);
+                    answer = Integer.valueOf(this.scanner.next());
+                } catch (NumberFormatException ex) {
+                    System.out.println("Number Format Exception");
 //            ex.printStackTrace();
-        }
-        return s;
+                }
+            } while (answer < min || answer > max);
+            return answer;
+    }
+
+
+
+    public int getInt() {
+        boolean error = true;
+        int answer = 0;
+        do {
+            try {
+                System.out.println("Enter an integer.");
+                answer = Integer.valueOf(this.scanner.next());
+                error = false;
+            } catch (NumberFormatException ex) {
+                System.out.println("Number Format Exception");
+//            ex.printStackTrace();
+            }
+        } while (error);
+        return answer;
     }
 
 //    public int getInt() {
@@ -74,19 +95,37 @@ public class Input {
 //        return answer;
 //    }
 
+//    public int getInt(String prompt) {
+////        int answer;
+////        System.out.println(prompt);
+////        answer = this.scanner.nextInt();
+////        return answer;
+////    }
+
     public int getInt(String prompt) {
-        int answer;
-        System.out.println(prompt);
-        answer = this.scanner.nextInt();
+        int answer = 0;
+        try {
+            System.out.println(prompt);
+            answer = Integer.valueOf(this.scanner.next());
+        } catch (NumberFormatException ex) {
+            System.out.println("Number Format Exception");
+//            ex.printStackTrace();
+        }
         return answer;
     }
 
+
     public double getDouble(double min, double max) {
-        double answer;
+        double answer = 0;
         do {
-            System.out.println("Enter a double between " + min + " and " + max);
-            answer = this.scanner.nextDouble();
-        } while (answer > max || answer < min);
+            try {
+                System.out.println("Enter a double between " + min + " and " + max);
+                answer = Double.valueOf(this.scanner.next());
+            } catch (NumberFormatException ex) {
+                System.out.println("Number Format Exception");
+//            ex.printStackTrace();
+            }
+        } while (answer < min || answer > max);
         return answer;
     }
 
@@ -101,22 +140,43 @@ public class Input {
 //    }
 
     public double getDouble(String prompt, double min, double max) {
-        double answer;
+        double answer = 0;
         do {
-            System.out.println(prompt);
-            answer = this.scanner.nextDouble();
+            try {
+                System.out.println(prompt);
+                answer = Double.valueOf(this.scanner.next());
+            } catch (NumberFormatException ex) {
+                System.out.println("Number Format Exception");
+//            ex.printStackTrace();
+            }
         } while (answer < min || answer > max);
         return answer;
     }
 
-    public double getDouble() {
-        return getDouble("Enter a double: ");
-    }
+//    public double getDouble() {
+//        return getDouble("Enter a double: ");
+//    }
+
+//    public double getDouble(String prompt) {
+//        double answer;
+//        System.out.println(prompt);
+//        answer = this.scanner.nextDouble();
+//        return answer;
+//    }
 
     public double getDouble(String prompt) {
-        double answer;
-        System.out.println(prompt);
-        answer = this.scanner.nextDouble();
+        boolean error = true;
+        double answer = 0;
+        do {
+            try {
+                System.out.println(prompt);
+                answer = Double.valueOf(this.scanner.next());
+                error = false;
+            } catch (NumberFormatException ex) {
+                System.out.println("Number Format Exception");
+//            ex.printStackTrace();
+            }
+        } while (error);
         return answer;
     }
 
