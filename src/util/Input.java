@@ -1,5 +1,6 @@
 package util;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Input {
@@ -15,12 +16,11 @@ public class Input {
 
     public static void main(String[] args) {
         Input input = new Input();
-        System.out.println(input.getString());
-        System.out.println(input.yesNo());
-        System.out.println(input.getInt(3, 10));
+//
+//        System.out.println(input.getInt(3, 10));
         System.out.println(input.getInt());
-        System.out.println(input.getDouble(77, 77.7));
-        System.out.println(input.getInt("Enter an integer please"));
+//        System.out.println(input.getDouble(77, 77.7));
+//        System.out.println(input.getInt("Enter an integer please"));
 
     }
 
@@ -46,21 +46,33 @@ public class Input {
         return answer.charAt(0) == 'y';
     }
 
-    public int getInt(int min, int max) {
-        int answer;
-        do {
-            System.out.println("Enter an integer between " + min + " and " + max);
-            answer = this.scanner.nextInt();
-        } while (answer > max || answer < min);
-        return answer;
+//    public int getInt(int min, int max) {
+//        int answer;
+//        do {
+//            System.out.println("Enter an integer between " + min + " and " + max);
+//            answer = this.scanner.nextInt();
+//        } while (answer > max || answer < min);
+//        return answer;
+//    }
+
+    public String getInt() {
+        String s = "";
+        try {
+            System.out.println("Enter an integer.");
+            Integer.valueOf(s = this.scanner.next());
+        } catch (NumberFormatException ex) {
+            System.out.println("Number Format Exception");
+//            ex.printStackTrace();
+        }
+        return s;
     }
 
-    public int getInt() {
-        int answer;
-        System.out.println("Enter an integer");
-        answer = this.scanner.nextInt();
-        return answer;
-    }
+//    public int getInt() {
+//        int answer;
+//        System.out.println("Enter an integer");
+//        answer = this.scanner.nextInt();
+//        return answer;
+//    }
 
     public int getInt(String prompt) {
         int answer;
@@ -107,5 +119,6 @@ public class Input {
         answer = this.scanner.nextDouble();
         return answer;
     }
+
 
 }

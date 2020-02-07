@@ -55,7 +55,7 @@ public class GradesApplication {
 
                     scanner = new Scanner(System.in);
                     userInput = scanner.nextLine();
-                } while ();
+                } while (!userInput.equals(""));
             System.out.println("\n");
             System.out.print(students.get(userInput).getName() + "  ");
             System.out.print(userInput + "  ");
@@ -119,12 +119,12 @@ public class GradesApplication {
 //    }
 
 
-    public boolean yesNo() {
-        System.out.println("\nWould you like to see another student?");
-        scanner = new Scanner(System.in);
-        userInput = this.scanner.next();
-        return userInput.charAt(0) == 'y';
-    }
+//    public boolean yesNo() {
+//        System.out.println("\nWould you like to see another student?");
+//        scanner = new Scanner(System.in);
+//        userInput = this.scanner.next();
+//        return userInput.charAt(0) == 'y';
+//    }
 
 //    public void printStudentInfo() {
 //        scanner = new Scanner(System.in);
