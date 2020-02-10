@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 public class ProgrammingPushups {
     public static void main(String[] args) {
@@ -10,10 +9,39 @@ public class ProgrammingPushups {
 
         //Create a String[] with at least 6 String objects. Also create an empty ArrayList<String>. Then loop over the array and put the items into the ArrayList so that we have the same contents
 
-        String[] fruits = new String[]{"banana", "apple", "orange", "grapefruit", "pear", "kiwi"};
+//        String[] fruits = new String[]{"banana", "apple", "orange", "grapefruit", "pear", "kiwi"};
+//
+//        ArrayList<String> fruitArray = new ArrayList<>(Arrays.asList(fruits));
+//        System.out.println(fruitArray);
 
-        ArrayList<String> fruitArray = new ArrayList<>(Arrays.asList(fruits));
-        System.out.println(fruitArray);
+        ArrayList<String> list = new ArrayList<>();
+        list.add("one");
+        list.add("two");
+        list.add("three");
+
+        String listString = "";
+
+        for (String s : list){
+            listString += s + "\n";
+        }
+
+        System.out.println(listString);
+
+//        // Better solution from stackoverflow
+//        ArrayList<String> list = new ArrayList<String>();
+//        list.add("one");
+//        list.add("two");
+//        list.add("three");
+//
+//        StringBuilder sb = new StringBuilder();
+//        for (String s : list)
+//        {
+//            sb.append(s);
+//            sb.append("\n");
+//        }
+//
+//        System.out.println(sb.toString());
+
     }
 
 
