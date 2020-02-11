@@ -59,7 +59,7 @@ public class FileIO {
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
-        
+
         // Adding items to empty fruit list
         fruit.add("kiwi");
         fruit.add("starfruit");
