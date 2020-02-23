@@ -14,18 +14,18 @@ public class ProgrammingPushups {
 //        ArrayList<String> fruitArray = new ArrayList<>(Arrays.asList(fruits));
 //        System.out.println(fruitArray);
 
-        ArrayList<String> list = new ArrayList<>();
-        list.add("one");
-        list.add("two");
-        list.add("three");
-
-        String listString = "";
-
-        for (String s : list){
-            listString += s + "\n";
-        }
-
-        System.out.println(listString);
+//        ArrayList<String> list = new ArrayList<>();
+//        list.add("one");
+//        list.add("two");
+//        list.add("three");
+//
+//        String listString = "";
+//
+//        for (String s : list){
+//            listString += s + "\n";
+//        }
+//
+//        System.out.println(listString);
 
 //        // Better solution from stackoverflow
 //        ArrayList<String> list = new ArrayList<String>();
@@ -44,6 +44,42 @@ public class ProgrammingPushups {
 
     }
 
+//Method that takes in a list of integers and an int, parses to find pairs of integers in the list that sum to int parameter. Return result as a list of lists of integers
+
+    public static ArrayList<ArrayList<Integer>> listPairSum(int x){
+        ArrayList<ArrayList<Integer>> sums = new ArrayList<>();
+        ArrayList<Integer> a1 = new ArrayList<>();
+        a1.add(1);
+        a1.add(2);
+        a1.add(3);
+        a1.add(3);
+        a1.add(4);
+        a1.add(8);
+        sums.add(a1);
+
+        ArrayList<Integer> a2 = new ArrayList<>();
+        a2.add(5);
+        a2.add(6);
+        a2.add(2);
+        a2.add(5);
+        sums.add(a2);
+
+        ArrayList<Integer> a3 = new ArrayList<>();
+        a3.add(1);
+        a3.add(1);
+        a3.add(7);
+        a3.add(9);
+        sums.add(a3);
+
+        for (ArrayList<Integer> sum : sums) {
+            for (Integer integer : sum) {
+                System.out.print(integer + " ");
+                if (integer)
+            }
+            System.out.println();
+        }
+        return sums;
+    }
 
     //  Write a Java program to add two binary numbers. Go to the editor
     //Input Data:
