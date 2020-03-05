@@ -48,11 +48,10 @@ public class JDBCLecture {
                 }
 
                 // Creating new ad
-                String insertQuery = String.format("INSERT INTO ads (user_id, title, description)");
+                String insertQuery = String.format("INSERT INTO ads (title, description)");
                 Ad newAd = new Ad(
-                        newAd.getUserId(),
-                        newAd.getTitle(),
-                        newAd.getDescription()
+                        "New Stuff",
+                        "Contact for more details"
                 );
                 statement.executeUpdate(insertQuery, Statement.RETURN_GENERATED_KEYS);
                 rs = statement.getGeneratedKeys();
