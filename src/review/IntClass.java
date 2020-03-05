@@ -23,7 +23,7 @@ public class IntClass {
     }
 
     public static int calcSum() {
-
+        return 0;
     }
 
 
