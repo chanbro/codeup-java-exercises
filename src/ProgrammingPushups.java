@@ -47,15 +47,15 @@ public class ProgrammingPushups {
 
     // Factors of a number
 
-    public static ArrayList<Integer> factor(int num){
-        ArrayList<Integer> factors = new ArrayList<>();
-        for (int i = 1; i <= num; i++){
-            if (num % i == 0) {
-                factors.add(i);
-            }
-    }
-        return factors;
-    }
+//    public static ArrayList<Integer> factor(int num){
+//        ArrayList<Integer> factors = new ArrayList<>();
+//        for (int i = 1; i <= num; i++){
+//            if (num % i == 0) {
+//                factors.add(i);
+//            }
+//    }
+//        return factors;
+//    }
 
 //Method that takes in a list of integers and an int, parses to find pairs of integers in the list that sum to int parameter. Return result as a list of lists of integers
 
